@@ -77,8 +77,14 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        #'ENGINE': 'django.db.backends.sqlite3',
+        #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'mysql',  # MySQL中Schema名字
+        'USER': 'root',
+        'PASSWORD': 'gdim123',  # MySQL的密码
+        'HOST': '127.0.0.1',  # 默认本地
+        'PORT': '3306'  # 默认3306端口
     }
 }
 
